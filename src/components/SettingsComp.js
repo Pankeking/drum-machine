@@ -7,7 +7,7 @@ function SettingsComp() {
     return (
         <div className="col-6 row">
             <SelectorComp selecName={"on/off"}/>
-            <DisplayKeyComp displayName={"Heater-1"}/>
+            <DisplayKeyComp />
             <VolumeComp />
             <SelectorComp selecName={"drum/piano"}/>
         </div >
