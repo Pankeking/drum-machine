@@ -15,6 +15,22 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+.press {
+  transform: scale(0.9);
+}
+
+#drum-machine {
+  border: #2196f3;
+  
+}
+
+#settings {
+  background-color: #2196f3;
+}
+.styled-button {
+  background-color: #2196f3;
+}
+
 
 
 
