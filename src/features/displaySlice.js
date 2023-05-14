@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const displaySlice = createSlice({
     name: "display",
     initialState: {
-        displayName: "key name",
+        displayName: "",
     },
     reducers: {
         setDisplayName: (state, action) => {

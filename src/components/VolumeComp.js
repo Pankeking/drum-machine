@@ -1,5 +1,4 @@
 import React from "react";
-import Button from "react-bootstrap/Button";
 import { useSelector, useDispatch } from "react-redux";
 import Form from "react-bootstrap/Form";
 import { setVolume } from "../features/volumeSlice";

@@ -5,8 +5,8 @@ function DisplayKeyComp() {
 
     const displayName = useSelector((state) => state.display.displayName);
     return (
-        <div id="display" className="text text-start align-items-center mt-0">
-            <p >
+        <div className="text text-start align-items-center mt-0">
+            <p id="display">
                 {displayName}
             </p>
         </div>

@@ -1,8 +1,7 @@
 .drums {
   transition: 0.7s ease-in-out;
   font-size: 1.75em;
-  max-width: 700px;
-  min-width: 60%;
+  width: 80%;
   height: 60%;
   position: absolute;
   top: 50%;
@@ -13,6 +12,10 @@
   border: 1px solid white;
   background-color: white;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
 }
 
 .press {
@@ -21,17 +24,100 @@
 
 #drum-machine {
   border: #2196f3;
-  
 }
 
 #settings {
   background-color: #2196f3;
 }
+
+
+/* General Styles */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Drum Pad Component */
+.drum-button {
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.1s ease-in-out;
+  width: 100%;
+}
+/* Power Component */
 .styled-button {
-  background-color: #2196f3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8b500;
+  border-radius: 50%;
+  width: 40%;
+  height: 40%;
+}
+
+.styled-button .border {
+  outline: none;
+}
+
+.power-text {
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+  position: absolute;
+  top: 15%;
+}
+
+.border {
+  border: 1px solid #000;
+}
+
+
+/* Display Key Component */
+#display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+  border-radius: 8px;
+  padding: 10px;
+  color: ivory;
+  font-size: 1em;
 }
 
 
 
 
+/* Key Component (Responsive Styles) */
+@media (max-width: 767px) {
+  #display {
+    font-size: 0.75em !important;
+  }
+  .drum-button {
+    padding-right: 1.1em;
+    padding-left: 0.7em;
+    padding-bottom: 0.7em;
+    margin-left: -0.3em;
+  }
+  .drums {
+    width: 400px;
+    height: 300px;
+  }
+  #settings {
+    height: 100%;
+    font-size: 14px;
+  }
+  #keys-comp {
+    margin-top: -0.9em;
+  }
+  .styled-button {
+    width: 50%;
+    height: 30%;
+  }
+}
 

@@ -4,18 +4,19 @@ import KeyComp from "./KeyComp";
 function KeysComp() {
     return (
         <div 
+            id="keys-comp"
             className="me-4 col-6 row">
-            <KeyComp keyName={"q"} />
-            <KeyComp keyName={"w"} />
-            <KeyComp keyName={"e"} />
+            <KeyComp keyName={"Q"} />
+            <KeyComp keyName={"W"} />
+            <KeyComp keyName={"E"} />
 
-            <KeyComp keyName={"a"} />
-            <KeyComp keyName={"s"} />
-            <KeyComp keyName={"d"} />
+            <KeyComp keyName={"A"} />
+            <KeyComp keyName={"S"} />
+            <KeyComp keyName={"D"} />
             
-            <KeyComp keyName={"z"} />
-            <KeyComp keyName={"x"} />
-            <KeyComp keyName={"c"} />
+            <KeyComp keyName={"Z"} />
+            <KeyComp keyName={"X"} />
+            <KeyComp keyName={"C"} />
         </div>
     )
 }
