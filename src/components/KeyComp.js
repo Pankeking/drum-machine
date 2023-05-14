@@ -47,10 +47,10 @@ function KeyComp({ keyName }) {
             audio.volume = 0;
         }
         const playPromise = audio.play();
+        dispatch(setDisplayName(name))
         if (playPromise !== undefined) {
             playPromise
             .then(() => {
-                dispatch(setDisplayName(name))
                 dispatch(setPressedButton(keyName))
                 setTimeout(() => {
                     dispatch(clearPressedButton());
@@ -80,13 +80,13 @@ function KeyComp({ keyName }) {
 
     return (
         <div
-            id={name}
-            onKeyDown={handleKeyPress} 
-            className="drum-pad text-center col-4 pt-4 pb-4">
+        className="text-center col-4 pt-4 pb-4">
             <Button 
+                onKeyDown={handleKeyPress} 
+                id={name}
                 style={{backgroundColor: isPressed ? generateRandomColor() : "gray"}}
                 onClick={handleClick}
-                className={`w-100 drum-button fs-3 h-75 shadow ${isPressed ? "press" : ""}`} 
+                className={`drum-pad w-100 drum-button fs-3 h-75 shadow ${isPressed ? "press" : ""}`} 
                 variant="outline-success"
                 size="lg"
                 >
