@@ -19,7 +19,7 @@ function KeyComp({ keyName }) {
         A: {src: "https://s3.amazonaws.com/freecodecamp/drums/Heater-4_1.mp3", name: "Heater 4"},
         S: {src: "https://s3.amazonaws.com/freecodecamp/drums/Heater-6.mp3", name: "Heater 6"},
         D: {src: "https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3", name: "Dsc Oh"},
-        Z: {src: "https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3", name: "Kick'nHat"},
+        Z: {src: "https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3", name: "Kick n' Hat"},
         X: {src: "https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3", name: "Kick"},
         C: {src: "https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3", name: "Hat"},
     }
@@ -81,7 +81,6 @@ function KeyComp({ keyName }) {
     return (
         <div
             id={name}
-            tabIndex="0"
             onKeyDown={handleKeyPress} 
             className="drum-pad text-center col-4 pt-4 pb-4">
             <Button 
@@ -92,15 +91,14 @@ function KeyComp({ keyName }) {
                 size="lg"
                 >
                 {keyName}
+                <audio 
+                    id={keyName}
+                    src={source} 
+                    autoPlay={true}
+                    className="clip" 
+                >
+                </audio>
             </Button>
-            <audio 
-                id={keyName}
-                src={source} 
-                autoPlay={true}
-                className="clip" 
-            >
-                
-            </audio>
         </div>
     )
 }
